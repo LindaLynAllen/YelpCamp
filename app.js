@@ -1,22 +1,13 @@
 var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
-var mongoose = require("mongoose")
+var mongoose = require("mongoose");
+var Campground = require("./models/campground");
 
 mongoose.connect("mongodb://localhost:27017/yelp_camp", { useNewUrlParser: true });
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
-
-//SCHEMA SETUP
-
-var campgroundSchema = new mongoose.Schema({
-    name: String,
-    image: String,
-    description: String
-});
-
-var Campground = mongoose.model("Campground", campgroundSchema);
 
 // Campground.create(
 //     {
@@ -50,7 +41,7 @@ app.get("/campgrounds", function(req, res){
     });
 });
 
-//CREATE - add new campground to database
+//CREATE - add new campground to DB
 
 app.post("/campgrounds", function(req, res){
     //get data from form and add to campgounds array
