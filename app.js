@@ -2,9 +2,12 @@ var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
+var passport = require("passport");
+var LocalStrategy = require("passport-local");
 var Campground = require("./models/campground");
-var seedDB = require("./seeds");
 var Comment = require("./models/comment");
+var User = require("./models/user");
+var seedDB = require("./seeds");
 
 mongoose.connect("mongodb://localhost:27017/yelp_camp", { useNewUrlParser: true });
 
