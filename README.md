@@ -4,7 +4,7 @@ Full-stack project from "The Web Developer Bootcamp" by Colt Steele: https://www
 
 ## Live Demo
 
-To see the app, go to https://enigmatic-shore-27719.herokuapp.com/
+To see the app, go to https://lindamcdevitt-yelpcamp.herokuapp.com/
 
 ## Initial Setup
 * Add Landing Page
